@@ -1,0 +1,231 @@
+.LoginSignUpContainer {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoginSignUpBox {
+  background-color: rgb(243, 223, 229);
+  width: 25vw;
+  height: 70vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.login-signup-toggle {
+  display: flex;
+  height: 3vmax;
+}
+
+.login-signup-toggle > p {
+  color: rgba(0, 0, 0, 0.678);
+  font-weight: 300;
+  transition: all 0.5;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.login-signup-toggle > p:hover {
+  color: rgba(223, 106, 155, 0.678);
+}
+
+.LoginSignUpBox > div > button {
+  background-color: palevioletred;
+  height: 3px;
+  width: 50%;
+  border: none;
+  transition: all 0.5s;
+}
+
+.loginForm,
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 2vmax;
+  justify-content: space-evenly;
+  height: 70%;
+  transition: all 0.5s;
+}
+
+.signUpForm {
+  transform: translateY(-100%) translateX(-100vmax);
+}
+
+.loginForm > div,
+.signUpForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.loginForm > div > input,
+.signUpForm > div > input {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  font-weight: 300;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.loginForm > div > svg,
+.signUpForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+.loginForm > a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.651);
+  align-self: flex-end;
+  transition: all 0.5s;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.loginForm > a:hover {
+  color: rgba(0, 0, 0, 0.651);
+  font-weight: 800;
+}
+
+#registerImage > img {
+    width: 3vmax;
+    border-radius: 100%;
+}
+
+#registerImage > input {
+    display: flex;
+    padding: 0%;
+}
+
+#registerImage > input::-webkit-file-upload-button {
+    cursor: pointer;
+    width: 100%;
+    height: 3vmax;
+    z-index: 2;
+    border: none;
+    margin: 0%;
+    font-weight: 600;
+    transition: all 0.5s;
+    padding: 0 1vmax;
+    background-color: rgb(243, 223, 229);
+    color: rgb(142, 119, 119);
+}
+
+#registerImage > input::-webkit-file-upload-button:hover {
+    background-color: rgb(225, 167, 184);
+
+}
+
+.loginBtn,
+.signUpBtn {
+  width: 100%;
+  font-weight: 300;
+  border-radius: 4px;
+  background-color: #b3eae6;
+  color: #088178;
+  padding: 0.8vmax;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+  transition: all 0.5s;
+}
+
+.loginBtn:hover,
+.signUpBtn:hover {
+  background-color: #97c0bd;
+  font-weight: 700;
+}
+
+.shiftToLeft {
+  transform: translateX(-100%);
+}
+
+.shiftToNeutral {
+  transform: translateX(0%);
+}
+
+.shiftToNeutralForm {
+  transform: translateX(0%) translateY(-100%);
+}
+
+.shiftToRight {
+  transform: translateX(100%);
+}
+
+
+@media screen and (max-width: 920px) {
+    .LoginSignUpContainer {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+    
+    .LoginSignUpBox {
+        background-color: rgb(243, 223, 229);
+        width: 100%;
+    }
+
+    .login-signup-toggle {
+        height: 5vmax;
+    }
+    
+    .login-signup-toggle > p {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .loginForm, .signUpForm {
+        margin: 1vmax;
+        padding: 2vmax;
+    }
+
+    .loginForm > div > input, 
+    .signUpForm > div > input {
+        padding: 2.5vmax 5vmax;
+        font-size: 15px;
+    }
+
+    .loginForm > div > svg, 
+    .signUpForm > div > svg {
+        font-size: 2.6vmax;
+    }
+
+    .loginForm > a {
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    #registerImage > img {
+        width: 5vmax;
+    }
+
+    #registerImage > input::-webkit-file-upload-button {
+        height: 6vmax;
+        font-weight: 600;
+    }
+
+    .loginBtn, .signUpBtn {
+        font-weight: 500;
+        padding: 1.8vmax;
+        font-size: 18px;
+    }
+
+
+}

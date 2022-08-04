@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Macondo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Delius Unicase", cursive;
+  scroll-behavior: smooth;
+}
+
+
+/* Chrome, Safari, Edge, Opera*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox*/
+input[type=number]{
+  -moz-appearance: textfield;
+} 
+
+.greenColor {
+  color: green;
+}
+
+.redColor {
+  color: red;
+}

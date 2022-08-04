@@ -8,12 +8,13 @@ const { rmSync } = require("fs");
 
 // Register a User
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, role } = req.body;
 
   const user = await User.create({
     name,
     email,
     password,
+    role,
     avatar: {
       public_id: "this is a sample avatar",
       url: "profilePicUrl",

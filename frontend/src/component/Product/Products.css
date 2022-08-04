@@ -1,0 +1,116 @@
+.section-p1 {
+    padding: 40px 40px 40px 200px;
+}
+
+#product1 {
+  text-align: center;
+}
+
+#product1 .pro-container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+.pageBox {
+  display: flex;
+  justify-content: center;
+  margin: 6vmax;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.page-item {
+  background-color: #b3eae6;
+  list-style: none;
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  padding: 1vmax 1.5vmax;
+  transition: all 0.5;
+  cursor: pointer;
+}
+
+.page-item:first-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.page-item:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.page-link {
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
+
+.page-item:hover {
+  background-color: #97c0bd;
+}
+
+.pageItemActive {
+    background-color: #97c0bd;
+}
+
+.filterBox {
+    width: 10vmax;
+    position: absolute;
+    top: 20vmax;
+    left: 2vmax;
+}
+
+.categoryBox {
+    padding: 0;
+}
+
+.category-link {
+    list-style: none;
+    color: rgb(83, 70, 70);
+    font-size: 13px;
+    margin: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.category-link:hover {
+    color: rgb(68, 28, 28);
+    font-weight: 700;
+}
+
+.filterBox > fieldset {
+    border: 1px solid rgb(96, 92, 92);
+    padding: 0 10px;
+    color: rgb(43, 41, 41);
+}
+
+.MuiTypography-body1 {
+    color: rgb(55, 36, 36);
+
+}
+
+
+@media screen and (max-width: 600px){
+    .filterBox {
+        width: 30vmax;
+        position: static;
+        text-align: center;
+        margin: auto;
+    }
+
+    .page-link {
+        font-size: 12px;
+    }
+
+    .section-p1 {
+        padding: 20px;
+    }
+
+    #product1 .pro-container {
+        justify-content: space-around;
+        padding-top: 50px;
+    }
+}
