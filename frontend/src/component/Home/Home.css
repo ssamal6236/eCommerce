@@ -157,7 +157,7 @@ body {
   text-align: center;
 }
 
-#product1 .pro-container {
+#product1 .pro-container1 {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
@@ -278,6 +278,13 @@ body {
   border-bottom-left-radius: 0;
 }
 
+@media (max-width: 1067px) {
+  #newsletter .newsform {
+    width: 100%;
+  }
+}
+
+
 @media screen and (max-width: 920px) {
   .section-p1-h {
     padding: 40px 40px;
@@ -290,6 +297,11 @@ body {
 
   #feature .fe-box {
     margin: 15px 15px;
+  }
+
+  #product1 .pro-container1 {
+    padding: 20px;
+    justify-content: space-around;
   }
 }
 

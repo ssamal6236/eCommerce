@@ -30,7 +30,7 @@ router.route("/logout").get(logout);
 
 router.route("/me").get(isAuthenticatedUser, getUserDetails);
 
-router.route("/password/change").put(isAuthenticatedUser, changePassword);
+router.route("/password/update").put(isAuthenticatedUser, changePassword);
 
 router.route("/me/update").put(isAuthenticatedUser, updateProfile);
 

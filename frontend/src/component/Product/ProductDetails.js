@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import "./ProductDetails.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -8,6 +8,7 @@ import ReactStars from "react-rating-stars-component";
 import ReviewCard from "./ReviewCard.js";
 import Loader from "../layout/Loader/Loader";
 import MetaData from "../layout/MetaData";
+import { addItemsToCart } from "../../actions/cartAction";
 
 const ProductDetails = () => {
   const dispatch = useDispatch();
@@ -15,6 +16,24 @@ const ProductDetails = () => {
   const params = useParams();
 
   const { product, loading } = useSelector((state) => state.productDetails);
+
+  const [quantity, setQuantity] = useState(1);
+
+  const increaseQuantity = () => {
+    if (product.stock <= quantity) return;
+    const qty = quantity + 1;
+    setQuantity(qty);
+  };
+  const decreaseQuantity = () => {
+    if (quantity <= 1) return;
+    const qty = quantity - 1;
+    setQuantity(qty);
+  };
+
+  const addToCartHandler = () => {
+    dispatch(addItemsToCart(params.id, quantity));
+    //alert
+  };
 
   useEffect(() => {
     dispatch(getProductDetails(params.id));
@@ -64,11 +83,12 @@ const ProductDetails = () => {
                 <h1>{`$${product.price}`}</h1>
                 <div className="detailsBlock-3-1">
                   <div className="detailsBlock-3-1-1">
-                    <button>-</button>
-                    <input type="number" value="1" />
-                    <button>+</button>
+                    <button onClick={decreaseQuantity}>-</button>
+                    <input readOnly type="number" value={quantity} />
+                    <button onClick={increaseQuantity}>+</button>
                   </div>
                   <button
+                    onClick={addToCartHandler}
                     className={product.stock < 1 ? "redColor" : "greenColor"}
                   >
                     {product.stock < 1 ? "Out of Stock" : "Add to Cart"}

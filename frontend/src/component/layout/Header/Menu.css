@@ -1,0 +1,49 @@
+#Navbars {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    height: 100%;
+    width: 50%;
+    background-color: #8fc3bf;
+    transition: 0.5s ease;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    opacity: 95%;
+    padding: 100px 0 0 10px;
+    z-index: 2;
+  }
+
+@media screen and (max-width: 920px) {
+  .section-p1 {
+    padding: 40px 40px;
+  }
+
+  #Navbars {
+    display: flex;
+    right: 0px;
+  }
+
+  #NavbarWrapers li {
+    list-style: none;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  #NavbarWrapers li a{
+    padding: 10px;
+    color: #1a1a1a;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;    
+    transition: 0.3s ease;
+}
+
+#NavbarWrapers li a:hover,
+#NavbarWrapers li a.active {
+  color: #088178;
+}
+
+
+}

@@ -55,3 +55,36 @@
 .searchBox > button:hover {
     background-color: #97c0bd;
 }
+
+@media screen and (max-width: 920px) {
+    .searchBox {
+        height: 50vh;
+    }
+
+    .searchBox > input[type="text"] {
+        height: 12%;
+    }
+
+    .searchBox > button {
+        height: 12%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .searchBox {
+        height: 50vh;
+        flex-direction: column;
+    }
+
+    .searchBox > input[type="text"] {
+        height: 12%;
+        width: 70%;
+    }
+
+    .searchBox > button {
+        height: 12%;
+        width: 50%;
+        margin-top: 5px;
+        border-radius: 4px;
+    }
+}

@@ -132,3 +132,18 @@ footer .copyright {
   width: 100%;
   text-align: center;
 }
+
+
+@media screen and (max-width:920px){
+  .section-p1-f {
+    padding: 20px 20px;
+}
+  
+}
+
+@media screen and (max-width:420px){
+  .section-p1-f {
+    padding: 20px 20px;
+}
+  
+}

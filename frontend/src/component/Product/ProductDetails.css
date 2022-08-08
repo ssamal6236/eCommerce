@@ -17,8 +17,8 @@
 }
 
 .prodDetails > div:first-child {
-    width: 50%;
-  }
+  width: 50%;
+}
 
 .prodDetails > div:last-child {
   align-items: flex-start;
@@ -26,7 +26,8 @@
 }
 
 .CarouselImage {
-  width: 100%
+  width: 100%;
+  z-index: 1;
 }
 
 .detailsBlock-1 > h2 {
@@ -41,7 +42,7 @@
 
 .detailsBlock-2 {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -91,15 +92,15 @@
 }
 
 .detailsBlock-3-1 > .redColor {
-    border-radius: 4px;
-    background-color: #eab3b3;
-    color: #810808;
-    font-weight: 700;
-    padding: 15px 30px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    transition: 0.2s;
+  border-radius: 4px;
+  background-color: #eab3b3;
+  color: #810808;
+  font-weight: 700;
+  padding: 15px 30px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
 }
 
 .detailsBlock-3-1 > .redColor:hover {
@@ -108,15 +109,15 @@
 }
 
 .detailsBlock-3-1 > .greenColor {
-    border-radius: 4px;
-    background-color: #b3eae6;
-    color: #088178;
-    font-weight: 700;
-    padding: 15px 30px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    transition: 0.2s;
+  border-radius: 4px;
+  background-color: #b3eae6;
+  color: #088178;
+  font-weight: 700;
+  padding: 15px 30px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
 }
 
 .detailsBlock-3-1 > .greenColor:hover {
@@ -163,48 +164,82 @@
 }
 
 .reviewsHeading {
-    color: #000000be;
-    text-align: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.226);
-    padding: 5px;
-    width:70%;
-    margin: auto;
-    margin-bottom: 10px;
+  color: #000000be;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+  padding: 5px;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .reviews {
-    display: flex;
-    justify-content: space-around;
-    overflow: auto;
+  display: flex;
+  justify-content: space-around;
+  overflow: auto;
 }
 
 .reviewCard {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
-    border: 1px solid rgba(56, 56, 56, 0.116);
-    width: 30vmax;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 5px;
-    padding: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
+  border: 1px solid rgba(56, 56, 56, 0.116);
+  width: 30vmax;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+  padding: 5px;
 }
 
 .reviewCard > img {
-    width: 80px;
-    border-radius: 40px;
+  width: 80px;
+  border-radius: 40px;
 }
 
 .reviewCard > p {
-    color: rgba(0, 0, 0, 0.836);
-    margin: 10px 0 0 0;
+  color: rgba(0, 0, 0, 0.836);
+  margin: 10px 0 0 0;
 }
 
 .reviewCard > span {
-    color: rgba(0, 0, 0, 0.445);
-    font-size: 13px;
+  color: rgba(0, 0, 0, 0.445);
+  font-size: 13px;
 }
 
-.noReviews{
-    text-align: center;
-    color: rgba(0, 0, 0, 0.548);
+.noReviews {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.548);
+}
+
+@media (max-width: 920px) {
+  .prodDetails {
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .prodDetails > div:first-child {
+    width: 50%;
+}
+.detailsBlock-1 > h2 {
+  font-size: 30px;
+}
+}
+
+@media (max-width: 420px) {
+  .prodDetails > div:first-child {
+    width: 80%;
+}
+
+.detailsBlock-1 > h2 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.detailsBlock-3 {
+  width: 90%;
+}
+
+.detailsBlock-3 > h1 {
+  font-size: 35px;
+}
 }

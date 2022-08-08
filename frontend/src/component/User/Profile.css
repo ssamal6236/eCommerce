@@ -1,0 +1,126 @@
+.profileContaner {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.profileContaner > div {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileContaner > div:first-child > h1 {
+  transform: translateX(-5vmax) translateY(-1vmax);
+  margin-left: 5px;
+  color: rgb(172, 165, 165);
+}
+
+.profileContaner > div:first-child > img {
+  width: 20vmax;
+  border-radius: 100%;
+  transition: all 0.5s;
+}
+
+.profileContaner > div:first-child > img:hover {
+  transform: scale(1.05);
+}
+
+.profileContaner > div:first-child > a {
+  border: none;
+  background-color: #b3eae6;
+  color: #088178;
+  margin: 4vmax;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.3s;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.profileContaner > div:first-child > a:hover {
+  background-color: #a3b6b4;
+}
+
+.profileContaner > div:last-child {
+  justify-content: space-evenly;
+  padding: 5vmax;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+.profileContaner > div:last-child > div > h4 {
+  color: rgb(172, 165, 165);
+}
+
+.profileContaner > div:last-child > div > p {
+  color: rgb(118, 113, 113);
+  font-weight: 600;
+  margin: 5px;
+}
+
+.profileContaner > div:last-child > div:last-child {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.profileContaner > div:last-child > div:last-child > a {
+  border: none;
+  background-color: #b3eae6;
+  color: #088178;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.3s;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.profileContaner > div:last-child > div:last-child > a:last-child {
+  background-color: #eab3b3;
+  color: #810808;
+}
+
+.profileContaner > div:last-child > div:last-child > a:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 920px) {
+  .profileContaner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profileContaner > div:first-child > h1 {
+    transform: translateX(0vmax) translateY(-1vmax);
+    margin-left: 0;
+  }
+
+  .profileContaner > div:first-child > img {
+    width: 25vmax;
+  }
+
+  .profileContaner > div:first-child > a {
+    margin: 2vmax;
+    font-size: 20px;
+  }
+
+  .profileContaner > div:last-child {
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .profileContaner > div:last-child > div > h4,
+  .profileContaner > div:last-child > div > p {
+    text-align: center;
+    padding: 5px auto;
+  }
+}

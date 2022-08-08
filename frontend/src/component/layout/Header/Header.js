@@ -1,55 +1,76 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../images/logo.png";
 import "./Header.css";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { ImCross } from "react-icons/im";
 
-const Header = () => {
+const Header = ({ clicked, isClicked }) => {
+  const handleClicked = () => {
+    isClicked(!clicked);
+  };
+
   return (
     <section id="header">
-      <a href="#header">
+      <Link to="/">
         <img src={logo} className="logo" alt="logo" />
-      </a>
+      </Link>
 
       <div>
         <ul id="navbar">
           <li>
-            <a className="active" href="/">
+            <NavLink to="/" className="a">
               Home
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/products">Products</a>
+            <NavLink to="/products" className="a">
+              Products
+            </NavLink>
           </li>
           <li>
-            <a href="/blogs">Blogs</a>
+            <NavLink to="/blogs" className="a">
+              Blogs
+            </NavLink>
           </li>
           <li>
-            <a href="/about">About</a>
+            <NavLink to="/about" className="a">
+              About
+            </NavLink>
           </li>
           <li id="lg-cart">
-            <a href="/cart">
+            <NavLink to="/cart" className="a">
               <i className="fa-solid fa-cart-shopping"></i>
-            </a>
+            </NavLink>
           </li>
           <li id="lg-search">
-            <a href="/search">
+            <NavLink to="/search" className="a">
               <i className="fa-solid fa-magnifying-glass"></i>
-            </a>
+            </NavLink>
           </li>
           <li id="lg-account">
-            <a href="/login">
+            <NavLink to="/login" className="a">
               <i className="fa-solid fa-image-portrait"></i>
-            </a>
+            </NavLink>
           </li>
-          <a href="#1" id="close">
-            <i className="fa-solid fa-xmark"></i>
-          </a>
+          <i id="close" className="fa-solid fa-xmark"></i>
         </ul>
-      </div>
-      <div id="mobile">
-        <a href="/search"><i className="fa-solid fa-magnifying-glass"></i></a>
-        <a href="/login"><i className="fa-solid fa-image-portrait"></i></a>
-        <a href="/cart"><i className="fa-solid fa-cart-shopping"></i></a>
-        <i id="bar" className="fa-solid fa-bars"></i>
+        <div id="mobile">
+          <NavLink to="/search" className="a">
+            <i className="fa-solid fa-magnifying-glass"></i>
+          </NavLink>
+          <NavLink to="/login" className="a">
+            <i className="fa-solid fa-image-portrait"></i>
+          </NavLink>
+          <NavLink to="/cart" className="a">
+            <i className="fa-solid fa-cart-shopping"></i>
+          </NavLink>
+          {!clicked ? (
+            <GiHamburgerMenu className="icon" onClick={handleClicked} />
+          ) : (
+            <ImCross className="icon" onClick={handleClicked} />
+          )}
+        </div>
       </div>
     </section>
   );

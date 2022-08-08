@@ -70,7 +70,7 @@ const Home = () => {
           <section id="product1" className="section-p1-h">
             <h2>Featured Products</h2>
             <p>Summer Collection New Modern Design</p>
-            <div className="pro-container">
+            <div className="pro-container1">
               {products &&
                 products.map((product) => <Product product={product} />)}
             </div>

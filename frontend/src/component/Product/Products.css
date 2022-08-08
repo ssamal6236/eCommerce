@@ -91,9 +91,13 @@
     color: rgb(55, 36, 36);
 
 }
+@media screen and (max-width: 920px){
+  #product1 .pro-container {
+    padding: 20px 5px 5px 100px;
+}
+}
 
-
-@media screen and (max-width: 600px){
+@media screen and (max-width: 420px){
     .filterBox {
         width: 30vmax;
         position: static;
@@ -110,7 +114,6 @@
     }
 
     #product1 .pro-container {
-        justify-content: space-around;
-        padding-top: 50px;
-    }
+      padding: 20px ;
+  }
 }
