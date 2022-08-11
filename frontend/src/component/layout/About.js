@@ -126,7 +126,7 @@ const About = () => {
 
       <section id="about-app" className="section-p1-a">
         <h1>
-          Download Our <a href="#">App</a>
+          Download Our <a href="/about">App</a>
         </h1>
         <div className="video">
           <video src={v1} autoplay muted loop></video>
