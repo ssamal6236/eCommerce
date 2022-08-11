@@ -1,0 +1,142 @@
+.blog-header {
+  background-image: url("../../images/banner/b19.jpg");
+  background-position: 20%;
+  height: 400px;
+}
+.blog-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.blog-header p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#blog {
+  padding: 150px 150px 0 150px;
+}
+
+#blog .blog-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding-bottom: 90px;
+}
+
+#blog .blog-img {
+  width: 50%;
+  margin-right: 40px;
+}
+
+#blog img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#blog .blog-details {
+  width: 50%;
+}
+
+#blog .blog-details a {
+  text-decoration: none;
+  color: #000;
+  font-size: 11px;
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s;
+}
+
+#blog .blog-details a::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  top: 7px;
+  right: -50px;
+}
+
+#blog .blog-details a:hover {
+  color: #088178;
+}
+
+#blog .blog-details a:hover::after {
+  background-color: #088178;
+}
+
+#blog .blog-box h1 {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  font-size: 70px;
+  font-weight: 700;
+  color: #c9cbce;
+  z-index: -1;
+}
+
+@media screen and (max-width: 920px) {
+  .blog-header {
+    background-position: 20%;
+    height: 40vh;
+  }
+
+  #blog {
+    padding: 80px 50px 0 50px;
+  }
+
+  #blog .blog-details a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .blog-header p {
+    text-align: center;
+}
+  #blog {
+    padding: 60px 20px 0 20px;
+  }
+
+  #blog .blog-box {
+    flex-direction: column;
+    padding-bottom: 60px;
+  }
+
+  #blog .blog-img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  #blog .blog-details {
+    width: 100%;
+  }
+
+  #blog img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  #blog h4 {
+    font-size: 18px;
+    color: #222;
+  }
+
+  #blog p {
+    font-size: 14px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+  }
+
+  #blog .blog-box h1 {
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+}

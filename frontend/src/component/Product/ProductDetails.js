@@ -32,7 +32,7 @@ const ProductDetails = () => {
 
   const addToCartHandler = () => {
     dispatch(addItemsToCart(params.id, quantity));
-    //alert
+    //alert("Item added to cart");
   };
 
   useEffect(() => {
@@ -112,7 +112,7 @@ const ProductDetails = () => {
           {product.reviews && product.reviews[0] ? (
             <div className="reviews">
               {product.reviews &&
-                product.reviews.map((review) => <ReviewCard review={review} />)}
+                product.reviews.map((review) => <ReviewCard review={review} key={review._id}/>)}
             </div>
           ) : (
             <p className="noReviews">No Reviews Yet</p>

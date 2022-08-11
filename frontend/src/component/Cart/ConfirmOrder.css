@@ -1,0 +1,167 @@
+.confirmOrderPage {
+  width: 100vw;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.confirmOrderPage > div:last-child {
+  border-left: 1px solid black;
+}
+
+.confirmShippingArea {
+}
+
+.confirmShippingHeading,
+.confirmCartHeading,
+.orderSummaryHeading {
+  text-align: center;
+  font-size: 30px;
+  margin: 15px 0 0 0;
+  color: rgb(124, 119, 119);
+}
+
+.confirmShippingBox > div {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.confirmShippingBox > div > p {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(82, 72, 72);
+  margin: 0;
+}
+
+.confirmShippingBox > div > span {
+  color: rgb(169, 114, 114);
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.confirmCartContainer {
+  overflow-y: auto;
+  max-height: 30vmax;
+  padding: 5px;
+}
+
+.confirmCartContainer > div {
+  display: flex;
+  margin: 2vmax 0;
+  align-items: center;
+  background-color: rgb(243, 223, 229);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+  padding: 5px;
+}
+
+.confirmCartContainer > div > img {
+  width: 4vmax;
+  border-radius: 4px;
+}
+
+.confirmCartContainer > div > a {
+  text-decoration: none;
+  width: 60%;
+  color: rgb(169, 114, 114);
+  font-size: 15px;
+  font-weight: 200;
+  cursor: pointer;
+  padding-left: 1vmax;
+}
+
+.confirmCartContainer > div > span {
+  width: 30%;
+  text-align: end;
+  color: rgb(99, 65, 65);
+}
+
+.orderSummary > div {
+  border-bottom: 1px solid black;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.orderSummary > div > div {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.orderSummary > div > div > p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.orderSummary > div > div > span {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.orderTotal {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.orderTotal > p {
+  margin: 0;
+}
+
+.orderTotal > span {
+  font-weight: 600;
+}
+
+.orderSummary > button {
+  width: 90%;
+  font-weight: 300;
+  border-radius: 4px;
+  background-color: #b3eae6;
+  color: #088178;
+  padding: 0.8vmax;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+  transition: all 0.5s;
+  margin: 0 20px;
+}
+
+.orderSummary > button:hover {
+  background-color: #97c0bd;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 920px) {
+    .orderSummary > button {
+        font-weight: 500;
+        padding: 1vmax;
+        font-size: 15px;
+      }
+}
+
+@media screen and (max-width: 420px) {
+  .confirmOrderPage {
+    grid-template-columns: 1fr;
+  }
+
+  .confirmOrderPage > div:last-child {
+    border-left: none;
+    border-top: 1px solid black;;
+  }
+  
+  .orderSummary > div {
+    border-bottom: 1px solid black;
+    padding: 5px;
+    margin-bottom: 20px;
+    margin: 10px;
+  }
+  .orderSummary > button {
+    font-weight: 500;
+    padding: 1.8vmax;
+    font-size: 18px;
+  }
+  
+}

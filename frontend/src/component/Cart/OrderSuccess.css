@@ -1,0 +1,43 @@
+.orderSuccess {
+    margin: auto;
+    text-align: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.orderSuccess > svg {
+    font-size: 10vmax;
+    color: #678c8a;
+    transition: all 1s;
+}
+
+.orderSuccess > svg:hover {
+    transform: scale(1.5);
+    color: palevioletred;
+  }
+
+  .orderSuccess > p {
+    padding-top: 20px;
+    font-size: 2vmax;
+    color: rgb(137, 81, 100);
+  }
+
+  .orderSuccess > a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 3vmax;
+    background: -webkit-linear-gradient( palevioletred , #678c8a);
+    background-clip: text;
+    color: transparent;
+    transition: all 1s;
+  }
+  
+  .orderSuccess > a:hover {
+    font-size: 5vmax;
+    background: -webkit-linear-gradient( #678c8a, palevioletred);
+    background-clip: text;
+    color: transparent;
+  }

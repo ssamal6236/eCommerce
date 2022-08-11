@@ -81,16 +81,20 @@
   left: 20px;
 }
 
-#close {
+.close {
   display: none;
+  color: #343030;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 16px;
 }
 
 .icon {
   display: none;
   color: #343030;
-  font-size: 24px;
+  font-size: 28px;
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 16px;
 }
 
 /* Start Media Query for Tabs*******************************************************/
@@ -137,13 +141,8 @@
   }
 
   
-  #close {
-    display: initial;
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    color: #222;
-    font-size: 24px;
+  .close {
+    display: inline;
   }
 
   #lg-cart,

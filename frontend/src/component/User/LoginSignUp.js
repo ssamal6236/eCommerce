@@ -8,8 +8,9 @@ import FaceIcon from "@material-ui/icons/Face";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { login, register } from "../../actions/userAction";
+import MetaData from "../layout/MetaData";
 
-const LoginSignUp = () => {
+const LoginSignUp = ({ location }) => {
   const dispatch = useDispatch();
   const { loading, isAuthenticated } = useSelector((state) => state.user);
 
@@ -65,8 +66,10 @@ const LoginSignUp = () => {
   };
 
   useEffect(() => {
-    if (isAuthenticated) {
+    if (isAuthenticated === true) {
       navigate("/account");
+    } else {
+      navigate("/login");
     }
   }, [dispatch, navigate, isAuthenticated]);
 
@@ -90,6 +93,7 @@ const LoginSignUp = () => {
 
   return (
     <Fragment>
+      <MetaData title="Welcome to Jus Dogs" />
       {loading ? (
         <Loader />
       ) : (

@@ -53,7 +53,6 @@ const Header = ({ clicked, isClicked }) => {
               <i className="fa-solid fa-image-portrait"></i>
             </NavLink>
           </li>
-          <i id="close" className="fa-solid fa-xmark"></i>
         </ul>
         <div id="mobile">
           <NavLink to="/search" className="a">
@@ -68,7 +67,7 @@ const Header = ({ clicked, isClicked }) => {
           {!clicked ? (
             <GiHamburgerMenu className="icon" onClick={handleClicked} />
           ) : (
-            <ImCross className="icon" onClick={handleClicked} />
+            <ImCross className="close" onClick={handleClicked} />
           )}
         </div>
       </div>

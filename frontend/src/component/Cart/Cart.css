@@ -1,0 +1,245 @@
+.emptyCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 65vh;
+} 
+
+.emptyCart > svg {
+  font-size: 10vmax;
+  color: #678c8a;
+  transition: all 1s;
+}
+
+.emptyCart > svg:hover {
+  transform: scale(1.5);
+  color: palevioletred;
+}
+
+.emptyCart > h2 {
+  padding-top: 20px;
+  font-size: 2vmax;
+  color: rgb(137, 81, 100);
+}
+
+.emptyCart > a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 3vmax;
+  background: -webkit-linear-gradient( palevioletred , #678c8a);
+  background-clip: text;
+  color: transparent;
+  transition: all 1s;
+}
+
+.emptyCart > a:hover {
+  font-size: 5vmax;
+  background: -webkit-linear-gradient( #678c8a, palevioletred);
+  background-clip: text;
+  color: transparent;
+}
+
+.cartPage {
+  margin-top: 10px;
+}
+
+.cartheader {
+  width: 90%;
+  box-sizing: border-box;
+  display: grid;
+  margin: auto;
+  grid-template-columns: 4fr 1fr 1fr;
+  background-color: #b3eae6;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.cartheader > p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cartheader > p:last-child {
+  text-align: end;
+}
+
+.cartContainer {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  height: 100%;
+}
+
+.cartInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.cartInput > button {
+  border: none;
+  background-color: rgb(203, 163, 163);
+  border-radius: 10%;
+  color: white;
+  cursor: pointer;
+  padding: 0.3vmax;
+  transition: all 0.3s;
+}
+
+.cartInput > button:hover {
+  background-color: rgb(144, 112, 112);
+}
+
+.cartInput > input {
+  border: none;
+  font-size: 10px;
+  font-weight: 500;
+  color: rgb(89, 63, 63);
+  width: 40px;
+  text-align: center;
+  outline: none;
+}
+
+.cartSubtotal {
+  display: flex;
+  padding: 0.5vmax;
+  font-size: 15px;
+  font-weight: 500;
+  justify-content: flex-end;
+  color: rgb(118, 83, 83);
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.cartGrossTotal {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+}
+
+.cartGrossTotalBox {
+  border-top: 3px solid rgb(136, 188, 171);
+  margin: 1vmax 5vmax;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1vmax 0;
+}
+
+.cartGrossTotalBox > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkOutBtn {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5vmax;
+}
+.checkOutBtn > button {
+  border-radius: 4px;
+  background-color: #c8d29d;
+  color: #6b6b56;
+  font-weight: 700;
+  padding: 15px 30px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+.checkOutBtn > button:hover {
+  background-color: #9fc211;
+  transform: scale(1.1);
+}
+
+/* ***************************************************************/
+
+@media screen and (max-width: 920px) {
+  .cartPage {
+    margin-top: 0;
+  }
+
+  .cartheader {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .cartheader > p {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .cartContainer {
+    width: 95%;
+    margin: auto;
+    display: grid;
+  }
+  .cartInput {
+    padding-right: 20px;
+  }
+
+  .cartInput > button {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0.8vmax;
+  }
+
+  .cartInput > input {
+    font-size: 15px;
+  }
+
+  .cartSubtotal {
+    display: flex;
+    padding: 0.5vmax;
+    font-size: 18px;
+  }
+  .cartGrossTotal {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .cartheader {
+    grid-template-columns: 3fr 1fr 1fr;
+  }
+
+  .cartheader > p {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 5px;
+  }
+
+  .cartInput {
+    padding-right: 50px;
+  }
+
+  .cartInput > button {
+    font-size: 15px;
+  }
+
+  .cartSubtotal {
+    font-size: 15px;
+  }
+
+  .cartGrossTotal {
+    grid-template-columns: 1fr 3.5fr;
+  }
+
+  .cartGrossTotalBox {
+    border-top: 3px solid rgb(136, 188, 171);
+    margin: 1vmax 2vmax;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vmax 0;
+  }
+
+  .checkOutBtn {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2vmax;
+  }
+}

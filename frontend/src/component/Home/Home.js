@@ -14,9 +14,7 @@ import Loader from "../layout/Loader/Loader";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const { loading, products } = useSelector(
-    (state) => state.products
-  );
+  const { loading, products } = useSelector((state) => state.products);
 
   useEffect(() => {
     dispatch(getProduct());
@@ -24,12 +22,11 @@ const Home = () => {
 
   return (
     <Fragment>
+      <MetaData title="Jus Dogs" />
       {loading ? (
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="Welcome to Jus Dogs" />
-
           <section id="hero">
             <h4>Trade-in-offer</h4>
             <h2>Super Value deals</h2>
@@ -72,7 +69,9 @@ const Home = () => {
             <p>Summer Collection New Modern Design</p>
             <div className="pro-container1">
               {products &&
-                products.map((product) => <Product product={product} />)}
+                products.map((product) => (
+                  <Product product={product} key={product} />
+                ))}
             </div>
           </section>
 
