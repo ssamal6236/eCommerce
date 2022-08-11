@@ -1,6 +1,6 @@
 import React from "react";
 import ReactStars from "react-rating-stars-component";
-import profilePng from "../../images/profile/p1.jpg"
+import profilePng from "../../images/Profile.png";
 
 const ReviewCard = ({ review }) => {
   const options = {

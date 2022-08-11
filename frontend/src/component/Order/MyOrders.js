@@ -18,8 +18,8 @@ const MyOrders = () => {
     {
       field: "id",
       headerName: "Order ID",
-      minWidth: 220,
-      flex: 0.7,
+      minWidth: 150,
+      flex: 0.4,
     },
     {
       field: "status",
@@ -43,7 +43,7 @@ const MyOrders = () => {
       headerName: "Amount",
       type: "number",
       minWidth: 160,
-      flex: 0.4,
+      flex: 0.3,
     },
     {
       field: "orderDate",

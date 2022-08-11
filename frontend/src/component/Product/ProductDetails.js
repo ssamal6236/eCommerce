@@ -89,7 +89,7 @@ const ProductDetails = () => {
                   </div>
                   <button
                     onClick={addToCartHandler}
-                    className={product.stock < 1 ? "redColor" : "greenColor"}
+                    className={product.stock < 1 ? "redColor disabled" : "greenColor"}
                   >
                     {product.stock < 1 ? "Out of Stock" : "Add to Cart"}
                   </button>

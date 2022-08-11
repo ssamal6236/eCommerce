@@ -17,6 +17,7 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { clearErrors, createOrder } from "../../actions/orderAction";
+import { removeAllCartItems } from "../../actions/cartAction";
 
 const Payment = () => {
   const navigate = useNavigate();
@@ -92,6 +93,7 @@ const Payment = () => {
             status: result.paymentIntent.status,
           };
           dispatch(createOrder(order));
+          dispatch(removeAllCartItems());
 
           navigate("/success");
         } else {
