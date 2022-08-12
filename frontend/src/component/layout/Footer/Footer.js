@@ -30,20 +30,20 @@ const Footer = () => {
 
         <div className="col">
             <h4>About</h4>
-            <a href="#header">About Us</a>
-            <a href="#header">Delivery Information</a>
-            <a href="#header">Privacy Policy</a>
-            <a href="#header">Terms &amp; Conditions</a>
-            <a href="#header">Contact Us</a>
+            <a href="/about">About Us</a>
+            <a href="/about">Delivery Information</a>
+            <a href="/about">Privacy Policy</a>
+            <a href="/about">Terms &amp; Conditions</a>
+            <a href="/about">Contact Us</a>
         </div>
 
         <div className="col">
             <h4>My Account</h4>
-            <a href="#header">Sign In</a>
-            <a href="#header">View Cart</a>
-            <a href="#header">My Wishlist</a>
-            <a href="#header">Track My Order</a>
-            <a href="#header">Help</a>
+            <a href="/login">Sign In</a>
+            <a href="/cart">View Cart</a>
+            <a href="/orders">My Wishlist</a>
+            <a href="/orders">Track My Order</a>
+            <a href="/about">Help</a>
         </div>
 
         <div className="col install">
